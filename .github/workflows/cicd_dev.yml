@@ -15,7 +15,10 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-
+    - name: Install Tailwind
+      run: npm install -D tailwindcss
+    - name: Init Tailwind
+      run: npx tailwindcss init
     - name: Build
       run: npm run build
 
