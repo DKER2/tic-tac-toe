@@ -1,0 +1,8 @@
+.square {
+    background-color: #E2E8F0; 
+    transition: background-color 1s ease;
+}
+
+.square.clicked {
+    background-color: #64748B;
+}
