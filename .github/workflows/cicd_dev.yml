@@ -17,13 +17,20 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
+    - name: Set up Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
 
     - name: Install dependencies
       run: npm install
+      
     - name: Install Tailwind
       run: npm install -D tailwindcss
+      
     - name: Init Tailwind
       run: npx tailwindcss init
+      
     - name: Build
       run: npm run build
 
