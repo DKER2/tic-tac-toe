@@ -34,7 +34,7 @@ const Game = (props) => {
     setIsXNext(true);
   }
   
-  const handleKey = (e) => {
+  const handleChangHeightKeyDown = (e) => {
     if (e.key === "Enter") {
       console.log("Change Height Triggered");
       if(e.target.value <= 10){
@@ -60,7 +60,7 @@ const Game = (props) => {
         <GameBoard squares={squares} height={height} onClick={handleSquareClick}/>
         <button className="font-semibold border-4 border-slate-950 rounded-md my-4 md:my-4 lg:my-4" style={{padding: "5px"}} onClick={() => resetGame()}>Reset</button>
         <div className="my-4 md:my-4 lg:my-4">
-            <span>Game Board Height: </span><input type="text" className="w-12 bg-slate-200" defaultValue={height} onKeyDown={(e) => handleKey(e)}></input>
+            <span>Game Board Height: </span><input type="text" className="w-12 bg-slate-200" defaultValue={height} onKeyDown={(e) => handleChangHeightKeyDown(e)}></input>
         </div>
     </div>
   );
